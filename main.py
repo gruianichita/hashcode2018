@@ -1,3 +1,6 @@
+from typing import List
+
+
 class Ride:
 
     def __init__(self, row_start, col_start, row_finish, col_finish, earlyest_start, latest_start):
@@ -9,6 +12,12 @@ class Ride:
         self.latest_start = latest_start
 
 
+class Vehicle:
+
+    def __init__(self):
+        self.rides = []
+
+
 def main():
     file_name = 'b_should_be_easy.in'
     with open(f'in/{file_name}') as file:
@@ -18,6 +27,11 @@ def main():
             row_start, col_start, row_finish, col_finish, earlyest_start, latest_start = file.readline().split()
             ride = Ride(row_start, col_start, row_finish, col_finish, earlyest_start, latest_start)
             rides.append(ride)
+
+        vehicles: List[Vehicle] = []
+        for i in range(vehicle_count):
+            vehicle = Vehicle()
+            vehicles.append(vehicle)
 
 
 if __name__ == '__main__':
