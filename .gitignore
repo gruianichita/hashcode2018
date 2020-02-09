@@ -1,0 +1,5 @@
+.idea/
+venv/
+*.pyc
+.mypy_cache/
+in/
